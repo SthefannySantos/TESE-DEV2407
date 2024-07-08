@@ -1,0 +1,214 @@
+/*Imports sources*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+/*Geral*/
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "DM Sans", "roboto", sans-serif;
+  padding: 0px;
+}
+
+/*Especifico a elementos*/
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #2b2a36;
+  color: #989292;
+}
+
+.main-todo {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background-color: #383744;
+  width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.main-todo h1 {
+  color: #f1eded;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.todo-form {
+  display: flex;
+  width: 100%;
+}
+
+.todo-form input {
+  border-radius: 3px;
+  border: none;
+  margin: 2px;
+}
+
+.todo-form input[type="text"] {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  background: transparent;
+  font-size: 1rem;
+  width: 100%;
+  border-bottom: 2px solid #142a8f;
+  color: #ccc;
+}
+
+.todo-form input[type="date"] {
+  padding: 5px;
+  background-color: #3c3b4d;
+  font-size: 1rem;
+  width: 100%;
+  border: 1px solid #142a8f;
+  color: #ccc;
+  width: 250px;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.filter-form input[type="date"] {
+  padding: 10px;
+  background-color: #3c3b4d;
+  font-size: 1rem;
+  width: 100%;
+  border: 1px solid #142a8f;
+  color: #ccc;
+  margin: 5px;
+}
+
+.filter-form button {
+  margin: 5px;
+  border-radius: 8px;
+  background-color: #3c3b4d;
+  border: 1px solid #142a8f;
+  padding: 5px;
+  color: #ccc;
+  transition: 0.5s ease;
+}
+
+button:hover {
+  background-color: #f1eded;
+  color: #142a8f;
+}
+
+.todo-form input[type="text"],
+[type="date"]:focus-visible {
+  outline: none;
+}
+
+.filter-style input[type="date"] {
+  padding: 5px;
+  background-color: #3c3b4d;
+  font-size: 99rem;
+  width: 100%;
+  border: 1px solid #142a8f;
+  color: #ccc;
+  width: 250px;
+}
+
+.todo-form:focus-visible {
+  outline: none;
+}
+
+.filter-style input {
+  border-radius: 3px;
+  border: none;
+  margin: 2px;
+}
+
+.todo-form .form-btn {
+  border: none;
+  min-height: 40px;
+  min-width: 40px;
+  font-size: 1rem;
+  background-color: #142a8f;
+  border-radius: 25%;
+  color: #f1eded;
+  margin-left: 5px;
+  transition: 0.5s ease;
+}
+
+.todo-form .form-btn:hover {
+  background-color: #f1eded;
+  color: #142a8f;
+}
+
+#tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #29253f;
+  color: #fff;
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+.task .task-date {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin: 0px 15px;
+}
+
+.task .status {
+  margin-right: 10px;
+}
+
+.task .status.done + .task-desc {
+  text-decoration: line-through;
+  color: #142a8f;
+}
+
+.task .task-desc {
+  font-size: 1rem;
+  color: #fff;
+  padding: 5px 0px;
+  width: 100%;
+}
+
+.task .task-act {
+  display: flex;
+  gap: 10px;
+}
+
+.act-btn {
+  font-size: 1rem;
+}
+
+.act-btn.edit-btn {
+  color: #1f369f;
+}
+
+.act-btn.del-btn {
+  color: #a52121;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media screen and (max-width: 600px) {
+  .main-todo {
+    width: 300px;
+  }
+
+  .todo-form input[type="date"] {
+    width: 40px;
+    color: white;
+    padding: 2px;
+    margin: 2px;
+    text-align: center;
+  }
+}
